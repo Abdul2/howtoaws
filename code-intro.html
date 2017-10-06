@@ -1,0 +1,173 @@
+---
+layout: page
+title:  "Bridging the gap with developers - Introduction: GitHub and code"
+date:   2017-06-30 11:52:52 +0100
+excerpt_separator: <!--more-->
+---
+
+<div class="row">
+  <div class="column-third" style="padding-left:0;">
+    <div class="next-course">
+      <h2>Next course details</h2>
+      <ul>
+      <li>Course details will be coming soon</li>
+      <!-- <li>2.30pm - 4.30pm</li>
+      <li>Location 2MS press room</li> -->
+      </ul>
+      <!-- <p><a href="https://www.eventbrite.co.uk/e/bridging-the-gap-with-developers-intro-tickets-37089521758" target="_blank">Book a ticket for this course</a></p> -->
+    </div>
+  </div>
+  <div class="column-two-thirds" style="padding-right:0;">
+
+      <h2 class="heading-large">What the course covers</h2>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 1 - Download software</h3>
+        <p>You will need a few things on your laptop when working with GitHub and code. A text editor so you can edit and write code. We recommend <a href="https://atom.io/" target="_blank">Atom</a> which integrates nicely with GitHub. There are lots of others to try.</p>
+        <p>You'll also need to manage your work and connect to GitHub. To do this we recommend either downloading <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> or using command line with the Terminal app on your mac (you need to run this command in terminal to use command line <code>xcode-select --install</code>).</p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 2 - Find repo</h3>
+        <p>A repo is a project and its history in GitHub. You can look through all the <a href="github.com/UKHomeOffice">Home Office repos</a> and <a href="github.com/alphagov">GDS</a>. Our practice repo will be  <a href="https://github.com/owenm6/mockservice">https://github.com/owenm6/mockservice</a></p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 3 - Clone repo</h3>
+        <p>You need to clone or download a repo to your computer so you can work on it before uploading it back to GitHub. To clone a repo:</p>
+
+        <p class="heading-small">Directly from GitHub</p>
+        <p>Press the big green button that says ‘clone or download’. Make sure you move it to somewhere easy to find on your computer.</p>
+
+        <p class="heading-small">GitHub Desktop</p>
+        <p>Go to file > clone and input the URL of the repo.</p>
+
+        <p class="heading-small">Command Line</p>
+        <ol class="list list-number">
+          <li>(Optional) Create a new folder <code>mkdir name_of_folder</code></li>
+          <li>Navigate to that folder <code>cd name_of_folder</code></li>
+          <li>Clone repo <code>git clone url-of-repo</code></li>
+        </ol>
+
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 4 - Branch</h3>
+        <p>Branching is a way of working away from the live product. People create branches for new features or to test something. When they finish the work they request for it to be merged back into the main (master) branch. To create a branch:</p>
+
+        <p class="heading-small">GitHub Desktop</p>
+        <p>Go to branch > new branch and give it a name</p>
+
+        <p class="heading-small">Command Line</p>
+        <ol class="list list-number">
+          <li>Navigate to your repo folder with the <code>cd</code> command</li>
+          <li>Create a branch <code>git branch name</code></li>
+          <li>Change to that branch <code>git checkout name</code></li>
+        </ol>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 5 - Open project in a text editor</h3>
+        <p>To open a repo in your text editor, drag the folder into your text editor. In command line you can do this really quickly with this funky command <code>atom .</code></p>
+
+        <h3 class="heading-small">Intro to HTML</h3>
+        <p>HTML is the language we use to create the structure and content of a webpage. The types of things you’ll create in HTML are paragraphs, lists and images. Most of the time in HTML, we use opening and closing tags. So a paragraph would look like
+        <code>&lt;p&gt;I love cats.&lt;p&gt;</code></p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 6 - Make your changes</h3>
+        <p>To change something in a project, first find the file you need to work with. In the prototype kit, the things you will be interested in can be found in the app folder. In the views folder you can find the HTML pages. In the assets folder is the CSS and JavaScript files.</p>
+
+        <p>A good place to start is the index.html file. The index page is usually the homepage or start page of a website.</p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 7 - Commit and push</h3>
+        <p>Once you’ve made changes, save them. In Atom, you will notice the colour of the file changes to yellow. This tells you that you have changes locally that need to be uploaded back to Github.</p>
+
+        <p>The first step in uploading changes is to commit those changes. When you commit a change, what you are doing is taking a snapshot of your changes.</p>
+
+        <h3 class="heading-medium">To create a commit:</h3>
+
+        <p class="heading-small">GitHub Desktop</p>
+        <p>Once you have saved some changes, GitHub desktop should show you exactly what you changed. To commit, add a summary message and description in the box in the bottom left-hand corner and click the button ‘commit to name_of_branch’.</p>
+
+        <p class="heading-small">Command line</p>
+          <ol class="list list-number">
+            <li>Navigate to your repo folder with the <code>cd</code> command</li>
+            <li>Check the status of your project with <code>git status</code>. This shows you what files you have changed.</li>
+            <li>Do a <code>git add</code>. This tells git that you want to add certain files to a commit. You can add all the files that have changes using <code>git add .</code>. Or you can specify which files you want to add to a commit.</li>
+            <li>Now commit using <code>git commit -m “your commit message”</code></li>
+          </ol>
+
+        <div class="help"><p>The message added to a commit is really important. It needs to be descriptive and easy to understand. The great thing about a commit is you can go back in time and revert to the state of a project at a previous commit. To make this easier, make sure you create a commit message that is descriptive.</p></div>
+
+        <h3 class="heading-medium">To push (upload your changes):</h3>
+
+        <p class="heading-small">GitHub Desktop</p>
+        <p>Click the push origin button</p>
+
+        <p class="heading-small">Command line</p>
+        <p><code>git push</code></p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 8 - Creating a pull request</h3>
+        <p>A pull request tells the owner of a repo that you have made some changes and you would like them to be go live.</p>
+
+        <p>You can create a pull request on GitHub. Once you have pushed, you can go to branch > create pull request in GitHub desktop which take you to GitHub to do it. If you are using command line, the easiest way is probably to create one on the project page on GitHub.</p>
+      </section>
+
+    <section style="margin-top:60px;">
+
+      <h2 class="heading-large">Helpful terminology</h2>
+
+      <h4 class="heading-medium">Git</h4>
+      <p>Git refers to the version control software that lets you save snapshots of all your changes.</p>
+
+      <h4 class="heading-medium">Github</h4>
+      <p>Github is a website where you can host Git projects, collaborate and suggest improvements  and browse thousands of open source repos.</p>
+
+      <h4 class="heading-medium">Repository</h4>
+      <p>A repository or repo is all of the project files and the history of any changes you have made.</p>
+
+      <h4 class="heading-medium">Local</h4>
+      <p>A way of distinguishing the version of a repo on your own computer versus the version of the repo in a central place, for example Github.</p>
+
+      <h4 class="heading-medium">Remote</h4>
+      <p>The version of the repo in the central place.</p>
+
+      <h4 class="heading-medium">Branch</h4>
+      <p>A branch is a way to isolate changes you want to make. You don’t have to worry about breaking anything because it is another copy of the code - you can always go back to an earlier version.</p>
+
+      <p>A branch is a great way to experiment. In a branch you can work freely away from the live product without worrying about breaking anything.</p>
+
+      <p>Branches are also useful when you’re working in a team, so that you can keep anything you’re working on completely separate from anyone else.</p>
+
+      <p>This is a great <a href="https://www.atlassian.com/git/tutorials/using-branches" target="_blank">guide to branching</a>.</p>
+
+      <h4 class="heading-medium">Fork</h4>
+      <p>Forking is a way of making your own copy of an entire repo. It’s useful if you want to later contribute your changes back to the original copy by using a pull request.</p>
+
+      <h4 class="heading-medium">Master</h4>
+      <p>The master branch is usually where the code that can be made live is kept . You would normally only make updates to a live website from the master branch. It’s usually good practice to protect the master branch so that changes to it are controlled and checked by another person.</p>
+
+      <h4 class="heading-medium">Merge</h4>
+      <p>Merging is a how GitHub combines two branches back together again. Sometimes two people may have made changes to the same part of a file (a conflict). If so, Git allows you to choose which change should be committed.</p>
+
+      <h4 class="heading-medium">Commit</h4>
+      <p>A commit change is a snapshot of the changes you have made.</p>
+
+      <h4 class="heading-medium">Push</h4>
+      <p>Upload your local repo to a shared one hosted on the web (Github for example)</p>
+
+      <h4 class="heading-medium">Pull</h4>
+      <p>Download and synchronise the latest changes to a shared repo.</p>
+
+      <h4 class="heading-medium">Pull request</h4>
+      <p>A way of ask the owner of a repo to accept changes you have made.</p>
+    </section>
+
+  </div>
+</div>

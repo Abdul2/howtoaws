@@ -1,0 +1,143 @@
+---
+layout: page
+title:  "Bridging the gap with developers - Intermediary: prototyping and command line"
+date:   2017-06-30 11:52:52 +0100
+excerpt_separator: <!--more-->
+---
+
+<div class="row">
+  <div class="column-third" style="padding-left:0;">
+    <div class="next-course">
+      <h2>Next course details</h2>
+      <ul>
+      <li>Course details will be coming soon</li>
+      <!-- <li>2.30pm - 4.30pm</li>
+      <li>Location 2MS press room</li> -->
+      </ul>
+      <!-- <p><a href="https://www.eventbrite.co.uk/e/bridging-the-gap-with-developers-intro-tickets-37089521758" target="_blank">Book a ticket for this course</a></p> -->
+    </div>
+  </div>
+  <div class="column-two-thirds" style="padding-right:0;">
+
+      <h2 class="heading-large">What the course covers</h2>
+      <p class="lede">In this training, we take participants through using the GOV.UK prototyping kit, and how to get a prototype live using GitHub and Heroku.</p>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 1 - Find and download the prototyping kit on Github</h3>
+        <p>You can find the prototype kit here - <a href="https://github.com/alphagov/govuk_prototype_kit">github.com/alphagov/govuk_prototype_kit</a>. Download it to your computer. Make sure to change it’s name to something memorable (the name of your service or what you are testing). Then put it somewhere on your computer that is easy to find. A lot of people put their prototypes in sites.</p>
+        <p>You’ll use a copy of the kit for each different prototype you want to make - so this example shows 7 different prototypes.</p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 2 - Intro to command line</h3>
+        <p>When working with the kit, there are some things that can only be achieved using command line. Command line is a way of interact with a computer without the graphical user interface (GUI).</p>
+        <p>On a Mac, you use command line in an app called Terminal. Open Terminal - a quick way to do this on Mac is to press <code>cmd ⌘</code> <code>space</code> and start typing terminal.</p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 3 - Install Xcode and node if you haven’t already</h3>
+        <p>Xcode is a selection of developer tools. One of those tools is command line so you need Xcode installed. To install it, in Terminal input <code>xcode-select --install</code> and press enter. It will walk you through installing. If you already have it, it will say the tools are already installed.</p>
+        <p>You also need to install Node onto your computer. You can do this here - <a href="https://nodejs.org/en/">nodejs.org</a>. If you think you already have node, you can check by inputting this command into Terminal <code>node -v</code></p>
+
+
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 4 - Run the kit</h3>
+        <p>To run the kit, first navigate in terminal to prototype you have already downloaded. There are a few ways to do this. You can drag the folder into terminal application. Or you can navigate using commands. To do this, you will use the <code>cd</code> command. This means change directory. For example if you have put your prototype in your sites folder, you would input this command into terminal <code>cd sites/name_of_prototype_folder</code>.</p>
+        <p>Once you have navigated to the folder in terminal, you can run the kit with two commands. <code>npm install</code> followed by <code>npm start</code>. npm install is a command you only have to run once to install all the things the kit needs to work. Every other time you want to work on your prototype after that, all you need to do is navigate to the prototype folder and use the command npm start.</p>
+        <p>If you open your browser and go to this address - <a href="http://localhost:3000/">http://localhost:3000/</a> - you will find the kit welcome page.</p>
+        <p class="help">!! NOTE - if the kit is running, you will need to open a new terminal window if you want to do anything in command line like committing or publishing changes.</p>
+
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 5 - Exploring the kit</h3>
+        <p>Now the kit is running, we want to open it in a text editor so we can start making changes. In your text editor go to file > open and find your project.</p>
+        <p>Once opened, you’ll find most of the files you need in the app folder.</p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 6 - Making a new page</h3>
+        <p>You can make a new page from scratch or use one of the page templates. The page templates can be found in docs > views > examples.</p>
+
+        <p>Put your new pages in app > views </p>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 7 - Upload your prototype to GitHub</h3>
+        <p>You can do this with Command Line or GitHub Desktop. If you have taken the intro course you will have already linked your local computer to your GitHub account so this step becomes easier. </p>
+
+        <p class="heading-small">GitHub Desktop</p>
+        <p>Select File > add local repo. Navigate to your project and add it. Now commit your changes. Click the publish button in the top right.</p>
+
+        <p class="heading-small">Command line</p>
+        <p>Go to GitHub.com and create a new repo in your account. Then in command line (making sure you have opened up a new window if you are running the kit) navigate to your prototype folder using the <code>cd</code> command.</p>
+          <ol class="list list-number">
+            <li>Initialise - <code>git init</code></li>
+            <li>Add files - <code>git add .</code></li>
+            <li>Commit - <code>git commit -m “message”</code></li>
+            <li>Add remote - <code>git remote add origin url_of_github_repo</code></li>
+            <li>Push - <code>git push -u origin master</code></li>
+          </ol>
+      </section>
+
+      <section class="margin-bottom">
+        <h3 class="heading-medium">Step 8 - Creating a heroku app and password protecting it</h3>
+        <p>Once your prototype is in GitHub, you can make it live using a service called Heroku. Create an account with Heroku. Then create a new app. On the app dashboard deployment method, connect to GitHub and choose your prototype repo.</p>
+
+        <p>The final step is to add a username and password to protect the prototype. In the settings tab, click the button labeled ‘Reveal Config Vars’. In the ‘key’ field input USERNAME and in the value give a username. Add that and then create another one for PASSWORD.</p>
+      </section>
+
+    <section style="margin-top:60px;">
+
+      <h2 class="heading-large">Helpful terminology</h2>
+
+      <h4 class="heading-medium">Git</h4>
+      <p>Git refers to the version control software that lets you save snapshots of all your changes.</p>
+
+      <h4 class="heading-medium">Github</h4>
+      <p>Github is a website where you can host Git projects, collaborate and suggest improvements  and browse thousands of open source repos.</p>
+
+      <h4 class="heading-medium">Repository</h4>
+      <p>A repository or repo is all of the project files and the history of any changes you have made.</p>
+
+      <h4 class="heading-medium">Local</h4>
+      <p>A way of distinguishing the version of a repo on your own computer versus the version of the repo in a central place, for example Github.</p>
+
+      <h4 class="heading-medium">Remote</h4>
+      <p>The version of the repo in the central place.</p>
+
+      <h4 class="heading-medium">Branch</h4>
+      <p>A branch is a way to isolate changes you want to make. You don’t have to worry about breaking anything because it is another copy of the code - you can always go back to an earlier version.</p>
+
+      <p>A branch is a great way to experiment. In a branch you can work freely away from the live product without worrying about breaking anything.</p>
+
+      <p>Branches are also useful when you’re working in a team, so that you can keep anything you’re working on completely separate from anyone else.</p>
+
+      <p>This is a great <a href="https://www.atlassian.com/git/tutorials/using-branches" target="_blank">guide to branching</a>.</p>
+
+      <h4 class="heading-medium">Fork</h4>
+      <p>Forking is a way of making your own copy of an entire repo. It’s useful if you want to later contribute your changes back to the original copy by using a pull request.</p>
+
+      <h4 class="heading-medium">Master</h4>
+      <p>The master branch is usually where the code that can be made live is kept . You would normally only make updates to a live website from the master branch. It’s usually good practice to protect the master branch so that changes to it are controlled and checked by another person.</p>
+
+      <h4 class="heading-medium">Merge</h4>
+      <p>Merging is a how GitHub combines two branches back together again. Sometimes two people may have made changes to the same part of a file (a conflict). If so, Git allows you to choose which change should be committed.</p>
+
+      <h4 class="heading-medium">Commit</h4>
+      <p>A commit change is a snapshot of the changes you have made.</p>
+
+      <h4 class="heading-medium">Push</h4>
+      <p>Upload your local repo to a shared one hosted on the web (Github for example)</p>
+
+      <h4 class="heading-medium">Pull</h4>
+      <p>Download and synchronise the latest changes to a shared repo.</p>
+
+      <h4 class="heading-medium">Pull request</h4>
+      <p>A way of ask the owner of a repo to accept changes you have made.</p>
+    </section>
+
+  </div>
+</div>
